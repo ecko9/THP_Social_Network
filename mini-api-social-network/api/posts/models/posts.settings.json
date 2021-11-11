@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "posts",
+  "info": {
+    "name": "posts",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "text": {
+      "type": "text"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "likes": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}
